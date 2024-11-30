@@ -6,5 +6,6 @@ array=[]
 for _ in range(0,n):
     array.append(int(input("enter the element")))
     
+print(*array)    
 newArr = reverseArr(array)
-print("The reverse array is :", newArr)    
+print("The reverse array is :", *newArr)    

@@ -1,19 +1,5 @@
-def checkOddEven(n):
-    for i in range(0,len(n)):
-        if n[i] % 4 == 0:
-            print("Yes")
-        elif n[i] % 3 == 0:
-            print("Yes")
-        else:
-            print("No")
-
-n = int(input("enter no. of Car you want to enter"))
-
-arr =[]
-for i in range(n):
-    arr.append(int(input("enter car Number")))
-    
-CanRun = checkOddEven(arr)
-# print("This Car can be run",CanRun)    
-    
-    
+N = int(input())
+for _ in range(N):
+    digits = list(map(int, input()))
+    even_sum, odd_sum = sum(d for d in digits if d % 2 == 0), sum(d for d in digits if d % 2 != 0)
+    print("Yes" if even_sum % 4 == 0 or odd_sum % 3 == 0 else "No")
